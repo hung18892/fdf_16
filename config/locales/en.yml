@@ -21,3 +21,12 @@
 
 en:
   hello: "Hello world"
+  signup: "SignUp"
+  team: "This is the home page for the project 1 of team HT"
+  food: "Foods and Drink"
+  about: "About"
+  contact: "Contact"
+  home: "Home"
+  help: "Help"
+  login: "Login"
+  logo: "FOODS & DRINK"
