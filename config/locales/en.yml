@@ -21,7 +21,7 @@
 
 en:
   hello: "Hello world"
-  signup: "SignUp"
+  signup: "Sign Up"
   team: "This is the home page for the project 1 of team HT"
   food: "Foods and Drink"
   about: "About"
@@ -30,3 +30,12 @@ en:
   help: "Help"
   login: "Login"
   logo: "FOODS & DRINK"
+  welcome: "Welcome to Drinks And Food!"
+  create: "Create my account"
+  user.nil: "Cannot find User"
+  count_error_form:
+    zero: "The form contains no error"
+    one: "The form contains 1 error"
+    other: "The form contains %{count} errors"
+  user:
+    not_found: "User not found"
