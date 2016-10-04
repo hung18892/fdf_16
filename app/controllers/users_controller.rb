@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     @user = User.find_by id: params[:id]
     if @user.nil?
       flash[:danger] = t "user.nil"
-      redirect_to root_url
+      redirect_to root_path
     end
   end
 
@@ -19,6 +19,12 @@ class UsersController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit    
+  end
+
+  def update    
   end
 
   private
