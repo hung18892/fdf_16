@@ -39,3 +39,13 @@ en:
     other: "The form contains %{count} errors"
   user:
     not_found: "User not found"
+  product:
+    no_found: "Product not found"
+    create: "Product created"
+    fail: "Fail"
+  name: "Name product"
+  description: "Description product"
+  price: "Price product"
+  species: "Species product"
+  post: "Post"
+  picture_notice : "should be less than 5MB"
