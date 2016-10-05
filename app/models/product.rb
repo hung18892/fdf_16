@@ -3,11 +3,11 @@ class Product < ApplicationRecord
 
   has_many :comments, dependent: :destroy
   has_many :ratings, dependent: :destroy
-  has_many :carts_details, dependent: :destroy
+  has_many :cart_details, dependent: :destroy
   has_many :carts, through: :carts_details
   validate  :picture_size
   validates :name, presence: true
-  validates :price, presence: true
+  validates :price, presence: true, numericality: {only_integer: true}
   validates :species, presence: true
 
   mount_uploader :picture, PictureUploader
