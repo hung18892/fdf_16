@@ -1,0 +1,6 @@
+<li id="product-<%= product.id %>">
+  <div class="image"> <%= image_tag product.picture.url if product.picture? %></div>
+  <div class="price"><%= product.price %></div>
+  <div class="name"><%= product.name %></div>
+   <%= link_to "delete", "#" %>
+</li>
