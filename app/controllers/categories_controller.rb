@@ -1,35 +1,9 @@
 class CategoriesController < ApplicationController
   before_action :load_category, only: [:destroy]
-  before_action :logged_in_user
-  before_action :admin_user
 
   def index
     @categories = Category.recent.paginate page: params[:page],
       per_page: Settings.per_page
-  end
-
-  def new
-    @category = Category.new  
-  end
-
-  def create
-    @category = Category.new category_params
-    if @category.save
-      flash[:success] = t "category.create"
-    else
-      flash[:danger] = t "category.fail"
-    end
-    redirect_to categories_path 
-  end
-
-  def destroy
-    unless @category.destroy
-      flash[:danger] = t "category.no_destroy"
-      redirect_to root_path
-    else
-      flash[:success] = t "category.destroy"
-      redirect_to categories_path
-    end
   end
 
   private
@@ -43,5 +17,5 @@ class CategoriesController < ApplicationController
       flash[:danger] = t "category.no_found"
       redirect_to root_path
     end
-  end  
+  end
 end
