@@ -1,0 +1,6 @@
+<li id="comment-<%= comment.id %>">
+  <div class="content"><%= comment.content %></div>
+  <% if logged_in? && comment.user.is_user?(current_user) %>
+    <%= link_to t("delete"), comment, remote: true, method: :delete %>
+  <% end %>
+</li>

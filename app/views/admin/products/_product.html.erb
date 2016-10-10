@@ -2,5 +2,6 @@
   <div class="image"> <%= image_tag product.picture.url if product.picture? %></div>
   <div class="price"><%= product.price %></div>
   <div class="name"><%= product.name %></div>
-   <%= link_to "delete", admin_product, method: :delete,data: {confirm: t(:confirm)} %>
+  <%= link_to t("delete"), [:admin, product], method: :delete,
+    data: {confirm: t(:confirm)} %>
 </li>

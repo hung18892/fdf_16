@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :load_product, only: [:index,:show]
+  before_action :load_product, only: :show
 
   def index
     @products = Product.recent.paginate page: params[:page], 
@@ -7,6 +7,9 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @product.comments.recent.paginate page: params[:page],
+      per_page: Settings.per_page
   end
 
   private
