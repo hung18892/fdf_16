@@ -1,7 +1,7 @@
 class Admin::ProductsController < ApplicationController
   before_action :load_product, except: [:create, :new, :index]
-  before_action :load_category, only: [:create, :new, :edit]
-  before_action :admin_user 
+  before_action :load_categories, only: [:create, :new, :edit]
+  before_action :logged_in_user, :admin_user
 
   def index
     @products = Product.recent.paginate page: params[:page], 
@@ -63,7 +63,7 @@ class Admin::ProductsController < ApplicationController
     end  
   end
 
-  def load_category
+  def load_categories
     @categories = Category.all
   end
 end

@@ -1,32 +1,36 @@
-<%= form_for [:admin, @product], html: {multipart: true} do |f| %>
-  <div class="form-group">
-    <%= render "shared/error_messages", object: @product %>
-    <%= f.label :name %>
-    <%= f.text_field :name, placeholder: t(:name) %>
-  </div>
+<div class="row">
+  <div class = "col-md-6 col-md-offset-3">
+    <%= form_for [:admin, @product], html: {multipart: true} do |f| %>
+    <div class="form-group">
+      <%= render "shared/error_messages", object: f.object %>
+      <%= f.label :name %>
+      <%= f.text_field :name, placeholder: t(:name) %>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :description %>
-    <%= f.text_field :description, placeholder: t(:description) %>
-  </div>
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_field :description, placeholder: t(:description) %>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :price %>
-    <%= f.text_field :price, placeholder: t(:price) %>
-  </div>
+    <div class="form-group">
+      <%= f.label :price %>
+      <%= f.text_field :price, placeholder: t(:price) %>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :species %>
-    <%= f.text_field :species, placeholder: t(:species) %>
-  </div>
+    <div class="form-group">
+      <%= f.label :species %>
+      <%= f.text_field :species, placeholder: t(:species) %>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :category %>
-    <%= f.select :category_id, @categories.collect{|category| [category.name,category.id]} %>
-  </div>
+    <div class="form-group">
+      <%= f.label :category %>
+      <%= f.select :category_id, @categories.collect{|category| [category.name,category.id]} %>
+    </div>
 
-  <span class="picture">
-    <%= f.file_field :picture, accept: Settings.accept_image %>
-  </span>
-  <%= f.submit t "post", class: "btn btn-primary" %>
-<% end %>
+    <span class="picture">
+      <%= f.file_field :picture, accept: Settings.accept_image %>
+    </span>
+    <%= f.submit t "post", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

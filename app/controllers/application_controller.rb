@@ -4,12 +4,8 @@ class ApplicationController < ActionController::Base
 
   private
   def admin_user
-    unless logged_in_user
-      logged_in_user
-    else
-      unless current_user.admin
-        redirect_to root_path       
-      end
+    unless current_user.admin?
+        redirect_to root_path
     end
   end
   

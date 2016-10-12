@@ -11,3 +11,22 @@ User.create name: "admin",
   password_confirmation: "123456",
   tel: "0120759255",
   admin: true
+
+User.create name: "nobita",
+  email: "nobita@123.com",
+  password: "123456",
+  password_confirmation: "123456",
+  tel: "0123456789",
+  admin: true
+
+ 99.times do |n|
+  name  = Faker::Name.name
+  email = "example-#{n+1}@railstutorial.org"
+  password = "password"
+  User.create name: name,
+    email: email,
+    password: password,
+    password_confirmation: password,
+    tel: "0123456789",
+    admin: false
+end

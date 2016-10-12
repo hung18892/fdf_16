@@ -1,4 +1,6 @@
+<title><%= t "showall_product" %></title>
 <div class="list_products">
+  <%= will_paginate %>
   <div class="products">
     <%= render @products %>
   </div>

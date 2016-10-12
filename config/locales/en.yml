@@ -20,6 +20,14 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  add_product: "Add product"
+  showall_product: "Show all product"
+  admin_catego: "Category"
+  add_catego: "Add category"
+  showall_catego: "Show all category"
+  showall_sugg: "Show all suggest"
+  add_category: "Add category"
+  showall_user: "Show all user"
   hello: "Hello world"
   signup: "Sign Up"
   team: "This is the home page for the project 1 of team HT"
@@ -47,10 +55,11 @@ en:
   cart: "Cart"
   logout: "Log Out"
   goodbye: "Goodbye!"
+  all_users: "Show All Users"
   please_login: "Please login user"
   remember: "Remember me on this computer"
   sessions_error: "Invalid email/password combination"
-  userprofile: "Users"
+  userprofile: "All User Account"
   edit_user: "Edit User"
   update_profile: "Update your profile"
   save_changes: "Save changes"
@@ -60,7 +69,15 @@ en:
   admin_product: "Product"
   admin_categories: "Categories"
   admin_suggest: "Suggest"
+  category: "Categories"
+  dont_admin: "Can't Delete Admin"
+  user_destroy: "Delete successed"
   managerment: "Managerment"
+  admin: "Role Admin"
+  button:
+    delete: "Delete"
+    edit_role: "Edit role"
+  edit_role: "Edit role"
   count_error_form:
     zero: "The form contains no error"
     one: "The form contains 1 error"
@@ -96,3 +113,6 @@ en:
   picture_notice : "should be less than 5MB"
   delete: "delete"
   comment: "Comment"
+  classify:
+    drink: "Drink"
+    food: "Food"

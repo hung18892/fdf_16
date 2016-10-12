@@ -2,9 +2,21 @@
 @import 'bootstrap';
 /* mixins, variables, etc. */
 $gray-medium-light: #eaeaea;
+$light-gray: #777;
+$gray:#555;
+$gray-darker:#222;
+$gray-lighter:#666;
 /* universal */
 body {
   padding-top: 60px;
+}
+.navbar-inverse {
+  background-color: #c7dcfc;
+  color: rgb(255, 255, 255);
+  border-bottom: 1px solid white;  
+}
+.navbar-right {
+  font-size: 20px;
 }
 section {
   overflow: auto;
@@ -45,13 +57,13 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 32px;
-  color: white;
+  color: #3f5a9d  ;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: white;
+    color: #e86161;
     text-decoration: none;
   }
 }
@@ -87,4 +99,22 @@ input, textarea, select, .uneditable-input {
 }
 input {
   height: auto !important;
+}
+/* product */
+.list_products {
+  margin: auto;
+  width: 80%;
+}
+.thumbnail {
+  margin-bottom: 20px;
+  padding: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+.item.list-group-item {
+  float: none;
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 10px;
 }

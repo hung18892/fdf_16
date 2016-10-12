@@ -1,4 +1,5 @@
 <li id="category-<%= category.id %>">
   <div class="name"><%= category.name %></div>
-   <%= link_to "delete", [:admin, category], method: :delete, data: {confirm: t(:confirm)} %>
+   <%= link_to "delete", [:admin, category], method: :delete, 
+     data: {confirm: t(:confirm)} %>
 </li>
