@@ -1,0 +1,9 @@
+<%= form_for @comment, remote: true do |f| %>
+  <div class="form-group">
+    <%= render "shared/error_messages", object: @comment %>
+    <%= f.hidden_field :product_id, value: @product.id %>
+    <%= f.text_field :content, placeholder: t(:content) %>
+  </div>
+
+  <%= f.submit t "post", class: "btn btn-primary" %>
+<% end %> 

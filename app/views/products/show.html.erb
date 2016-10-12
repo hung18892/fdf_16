@@ -2,7 +2,10 @@
   <aside class="col-md-4">
     <section class="show_product">
       <%= render @product %>
-      <%= link_to t("product.edit_product"), edit_product_path(@product) %>
+      <%= render "comments/comment_form", product: @product %>
     </section>
   </aside>
+</div>
+<div id ="comments">
+  <%= render @comments %>
 </div>

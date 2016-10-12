@@ -8,12 +8,13 @@ Rails.application.routes.draw do
   delete "logout" => "sessions#destroy"  
   resources :users
   resources :categories, only: [:index]
-  resources :products
+  resources :products, only: [:show, :index]
   resources :suggests, only: [:create, :new, :index]
+  resources :comments, only: [:create, :destroy]
   namespace :admin do
     resources :products
     resources :categories
     resources :users
-    resources :suggests, only: [:index]
+    resources :suggests
   end
 end

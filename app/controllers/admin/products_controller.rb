@@ -1,5 +1,6 @@
 class Admin::ProductsController < ApplicationController
   before_action :load_product, except: [:create, :new, :index]
+  before_action :load_category, only: [:create, :new, :edit]
   before_action :admin_user 
 
   def index
@@ -9,7 +10,6 @@ class Admin::ProductsController < ApplicationController
 
   def new
     @product = Product.new
-    @categories = Category.all
   end
 
   def create
@@ -27,13 +27,12 @@ class Admin::ProductsController < ApplicationController
   end
 
   def edit
-    @categories = Category.all
   end
 
   def update
     if @product.update_attributes product_params
       flash[:success] = t "product.updated"
-      redirect_to products_path
+      redirect_to admin_products_path
     else
       load_product
       render :edit
@@ -43,7 +42,7 @@ class Admin::ProductsController < ApplicationController
   def destroy
     if @product.destroy
       flash[:success] = t "product.destroy"
-      redirect_to products_path
+      redirect_to admin_products_path
     else
       flash[:success] = t "product.no_destroy"
       render :new
@@ -62,5 +61,9 @@ class Admin::ProductsController < ApplicationController
       flash[:danger] = t "product.no_found"
       render file: "public/404.html"
     end  
+  end
+
+  def load_category
+    @categories = Category.all
   end
 end

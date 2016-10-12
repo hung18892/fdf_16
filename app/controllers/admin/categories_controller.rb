@@ -18,7 +18,7 @@ class Admin::CategoriesController < ApplicationController
     else
       flash[:danger] = t "category.fail"
     end
-    redirect_to categories_path 
+    redirect_to admin_categories_path 
   end
 
   def destroy
@@ -27,7 +27,7 @@ class Admin::CategoriesController < ApplicationController
       redirect_to root_path
     else
       flash[:success] = t "category.destroy"
-      redirect_to categories_path
+      redirect_to admin_categories_path
     end
   end
 
