@@ -1,13 +1,7 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <%= image_tag product.picture.url if product.picture? %>
-      <div class="caption">
-        <p><%= product.price %></p>
-        <p><%= product.name %></p>
-      </div>
-      </div>
-    </div>
+<div class="col-md-3 " id="product-<%= product.id %>">
+  <div class="item_product">
+    <div class="image"><%= link_to (image_tag product.picture.url),product %></div>
+    <div class="name"><%= product.name %></div>
+    <div class="price"><%= product.price %></div>
   </div>
 </div>

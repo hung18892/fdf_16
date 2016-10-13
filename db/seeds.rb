@@ -30,3 +30,7 @@ User.create name: "nobita",
     tel: "0123456789",
     admin: false
 end
+Category.create name: "Fast Food"
+Category.create name: "Alcohol"
+Category.create name: "Gas drink"
+Category.create name: "Drink"

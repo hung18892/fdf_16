@@ -1,15 +1,11 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6 col-md-4">
-       <div class="thumbnail">
-         <%= image_tag product.picture.url if product.picture? %>
-           <div class="caption">
-             <p><%= product.price %></p>
-             <p><%= product.name %></p>
-             <p><%= link_to "delete", [:admin, product], method: :delete, 
-               data: {confirm: t(:confirm)} %></p>
-            </div>
-       </div>
+<div class="col-sm-6 col-md-4">
+  <div class="item_product">
+    <div class="image"><%= image_tag product.picture.url if product.picture? %></div>
+    <div class="caption">
+      <div class="name"><%= product.name %></div>
+      <div class="price"><%= product.price %></div>
+      <div><%= link_to "delete", [:admin, product], method: :delete, 
+        data: {confirm: t(:confirm)} %></div>
     </div>
   </div>
 </div>
